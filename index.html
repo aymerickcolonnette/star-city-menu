@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pizzeria Star City</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>*{margin:0;padding:0;box-sizing:border-box}:root{--y:#FFD600;--g:#1A6B2F;--gd:#0F4520;--w:#FFFEF5;--sg:38px}body{background:var(--w);font-family:'Nunito',sans-serif;min-height:100vh}.sb{background-image:repeating-linear-gradient(90deg,transparent 0,transparent calc(var(--sg) - 14px),var(--y) calc(var(--sg) - 14px),var(--y) var(--sg))}header{text-align:center;padding:48px 24px 36px}.tl{font-size:13px;letter-spacing:4px;color:var(--gd);text-transform:uppercase;font-weight:700;margin-bottom:6px}.logo{font-family:'Bebas Neue';font-size:clamp(72px,14vw,120px);color:var(--g);line-height:.9}.lr{display:flex;align-items:center;justify-content:center}.st{font-size:28px;color:var(--y);margin:0 12px}.sub{font-size:15px;letter-spacing:6px;color:var(--g);text-transform:uppercase;margin-top:6px;font-weight:700}.mc{background:rgba(255,255,255,.92);border:2px solid rgba(26,107,47,.15);border-radius:4px;max-width:640px;margin:0 auto 40px;padding:40px 36px}.pi{text-align:center;margin-bottom:28px}.pn{font-family:'Bebas Neue';font-size:28px;color:var(--g)}.pb{display:inline-block;background:var(--g);color:var(--y);font-family:'Bebas Neue';font-size:18px;padding:2px 12px 0;border-radius:2px;margin-left:8px;vertical-align:middle}.pd{font-size:13px;color:#555;margin-top:4px;line-height:1.6;font-style:italic}.sep{text-align:center;color:var(--g);font-size:18px;margin:16px 0;opacity:.4}.stl{font-family:'Bebas Neue';font-size:26px;color:var(--g);text-align:center;margin-bottom:6px}.sb2{text-align:center;font-size:13px;color:#555;line-height:1.7;font-style:italic}.blk{margin-top:24px;border-top:1px dashed rgba(26,107,47,.2);padding-top:24px}.cb{text-align:center;font-size:13px;color:var(--gd);font-weight:700;letter-spacing:1px;padding-bottom:8px}.wa{color:var(--g);text-decoration:none;font-size:16px;font-weight:800}.qrs{background:var(--g);padding:48px 24px;text-align:center}.qrh{font-family:'Bebas Neue';font-size:38px;color:var(--y);letter-spacing:2px;margin-bottom:6px}.qrsub{font-size:13px;color:rgba(255,255,255,.75);letter-spacing:2px;text-transform:uppercase;margin-bottom:28px}.qrb{display:inline-block;background:#fff;padding:16px;border-radius:8px}.qrl{font-size:12px;color:rgba(255,255,255,.6);margin-top:20px}.un{background:rgba(255,214,0,.15);border:1px dashed rgba(255,214,0,.4);border-radius:4px;padding:10px 18px;margin-top:20px;display:inline-block}.un code{color:var(--y);font-size:13px;word-break:break-all}.un p{color:rgba(255,255,255,.7);font-size:11px;margin-top:4px}</style>
+</head>
+<body>
+<div class="sb">
+<header>
+<p class="tl">Pizzeria</p>
+<div class="lr"><span class="st">*</span><h1 class="logo">Star City</h1><span class="st">*</span></div>
+<p class="sub">la residence</p>
+</header>
+<div class="mc">
+<div class="pi"><div class="pn">Olympiades <span class="pb">12E</span></div><div class="pd">Base tomate, fromage, jambon, lardon, saucisse, oeufs, creme fraiche, olive</div></div>
+<div class="sep">-</div>
+<div class="pi"><div class="pn">Oiseaux des Iles <span class="pb">12E</span></div><div class="pd">Base tomate, fromage, chevre, miel, olive</div></div>
+<div class="sep">-</div>
+<div class="pi"><div class="pn">Pavillon <span class="pb">12E</span></div><div class="pd">Base tomate, fromage, champignons, jambon</div></div>
+<div class="sep">-</div>
+<div class="pi"><div class="pn">Frangipaniers <span class="pb">12E</span></div><div class="pd">Base tomate, tomate, champignon, oignon, poivrons</div></div>
+<div class="blk"><div class="stl">Supplements - 1E</div><div class="sb2">Chevre, Jambon, Miel, Chorizo, Oeuf, Lardon, Champignon</div></div>
+<div class="blk"><div class="stl">Nos Bases</div><div class="sb2">Creme fraiche ou Tomate</div></div>
+<div style="margin-top:20px"><div class="cb">Commande WhatsApp - <a class="wa" href="https://wa.me/33696942635">0696 942 635</a></div></div>
+</div>
+</div>
+<div class="qrs">
+<div class="qrh">Scannez-moi !</div>
+<div class="qrsub">Partagez le menu</div>
+<div class="qrb"><div id="qrcode"></div></div>
+<div class="un"><code id="url"></code><p>URL du menu</p></div>
+<div class="qrl">Scannez avec votre telephone</div>
+</div>
+<script>const u=window.location.href;document.getElementById('url').textContent=u;new QRCode(document.getElementById('qrcode'),{text:u,width:200,height:200,colorDark:'#1A6B2F',colorLight:'#fff',correctLevel:QRCode.CorrectLevel.H});</script>
+</body></html>
